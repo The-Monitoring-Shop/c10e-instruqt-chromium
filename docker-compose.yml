@@ -1,0 +1,17 @@
+services:
+  chromium:
+    image: themonitoringshop/c10e-instruqt-chromium:latest
+    pull_policy: always
+    container_name: c10e-instruqt-chromium
+    environment:
+      - LAUNCH_URL=https://university.chronosphere.io
+
+      - AUTOLOGIN=1
+      - AUTOLOGIN_EMAIL="student1@users.chronosphere.io"
+      - AUTOLOGIN_PASSWORD="Password123"
+
+      - REMOVEADMINMENU=0
+    ports:
+      - 6443:6443
+    shm_size: '2gb'
+    restart: "always"

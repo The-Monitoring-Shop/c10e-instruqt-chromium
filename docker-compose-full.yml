@@ -1,0 +1,28 @@
+services:
+  chromium:
+    image: themonitoringshop/c10e-instruqt-chromium:latest
+    container_name: c10e-instruqt-chromium
+    environment:
+      - TZ="Europe/London"
+      # - PUID=1000
+      # - PGID=1000
+      - APP_ARGS=--no-sandbox
+        --disable-infobars
+        --disable-session-crashed-bubble
+        --disable-component-update
+        --no-first-run
+        --disable-user-media-security
+        --disable-sync
+        --ignore-certificate-errors
+        --kiosk
+        --load-extension=/usr/share/chromium/extensions/c10e-autoLogin
+        # --load-extension=/usr/share/chromium/extensions/c10e-autoLogin,/usr/share/chromium/extensions/c10e-removeNavMenuAdmin
+      - LAUNCH_URL=https://university.chronosphere.io
+    volumes:
+      - ./chromium/extensions:/usr/share/chromium/extensions
+      - ./chromium/policies/chrome-policies.json:/etc/chromium/policies/managed/chrome-policies.json
+      - ./chromium/scripts/vnc_startup.sh:/dockerstartup/vnc_startup.sh
+    ports:
+      - 6443:6443
+    shm_size: '2gb'
+    restart: "always"

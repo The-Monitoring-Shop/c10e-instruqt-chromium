@@ -1,0 +1,14 @@
+{
+  "BrowserSignin": 0,
+  "HomepageIsNewTabPage": false,
+  "NewTabPageLocation": "https://university.chronosphere.io",
+  "PasswordManagerEnabled": false,
+  "RestoreOnStartup": 4,
+  "ShowHomeButton": false,
+  "URLAllowlist": [
+    "https://university.chronosphere.io",
+    "https://chronosphereio.okta.com",
+    "chrome-extension://*"
+  ],
+  "URLBlocklist": ["*"]
+}

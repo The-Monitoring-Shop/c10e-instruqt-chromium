@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Chronosphere - Auto Login",
+  "version": "1.0.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://university.chronosphere.io/*"
+      ],
+      "js": ["autoLogin.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAogpnSvDSc9C9VKf3YqcjvpbD+B6u1KcCC/lbKVFX0DCXpg3ay/+raPKldf7L4qTYbXFMo2xZtA0Uc6ixCKAOfWNKXEO0O2NoumIfo12HesIxFkSYx8mEODq5uSwhOgTyx3ZtLaqgcUatyMzcg1a0mNWoTnIIEAwQ82xn6Z1ZEBSX6QXZQPNGcRdineK9RSE3eWTYJUjmu1kYPGAUsxZcpo0pWgwA3jZRX7yoOs8OC2nz9iaz/sNgzmm2D6k3xZXCwcrIa+c2i3AVOY2geBplCXxUG2obbciJZEQR0Q+YI+IWGgnsJRMxsn0QEGedCPui2c5SI0PRMBmtWvKy310vrwIDAQAB"
+}

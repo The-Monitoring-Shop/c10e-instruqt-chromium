@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Chronosphere - Remove Navigation Menu's GoToAdmin",
+  "version": "0.0.1",
+  "permissions": ["activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://university.chronosphere.io/*"
+      ],
+      "js": ["removeNavMenu.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9MLllhTQH2U9Z1Sn9UK0xb/W2vDphBtHkCO0WGA/r7X8qLYXi12n4y9V3dAd7nGjAqiAoB8XRcmrKqx18uOfITiHrnV4n1nDPdpOqFabeHH+jXKNoDQFHp0K2jHReTPDxLpkJSfUYgKN18ACHchdcEWHHRBmlI3XPcHTEoJcIgDR3AfnQlwKUN4If+T353Byl9SHK1Y7+cDcDjbsfUIFlKqaEPxHUkCawQE45NUjC0zuMTF66EF3kwZ1RaqZiOVROm+ySC5l+1p5w3x1ATt829owfFt6WCPd46fbsv+gm9/66OkDGl4lun1/Jd/1vCOlC9WD0SMqbRGiGdtj9424wIDAQAB"
+}
